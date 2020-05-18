@@ -1,0 +1,67 @@
+<div id="tl_buttons">
+    <a href="contao?do=dcaToModel" class="header_back" title="">Back</a>
+</div>
+
+<fieldset id="pal_dcahelper" class="tl_box">
+    <legend onclick="AjaxRequest.toggleFieldset(this, 'dcahelper','tl_settings')">DCA to Model</legend>
+    <div class="tl_dcatomodel">
+        <form class="tl_form" action="<?= ampersand(\Environment::get('request'), true) ?>" method="post">
+            <div class="tl_formbody_edit">
+                <input type="hidden" name="FORM_SUBMIT" value="tl_dcatomodel">
+                <input type="hidden" name="REQUEST_TOKEN" value="<?= REQUEST_TOKEN ?>">
+                <div class="w50 widget">
+                    <h3>
+                        <label>DCA</label>
+                    </h3>
+                    <select name="dca" class="tl_select">
+                        <?php foreach($this->dcalist as $name): ?>
+                            <option value="<?= $name ?>"<?= $this->selectedOption === $name ? ' selected' : '' ?>><?= $name ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                    <p class="tl_help tl_tip">Here you can choose the DCA you want to create your models for.</p>
+                </div>
+                <div class="w50 widget clr">
+                    <h3>
+                        <label>Model description</label>
+                    </h3>
+                    <input type="text" name="pluralName" class="tl_text" placeholder="Reads and writes..."/>
+                    <p class="tl_help tl_tip">Here you can specify what your model does (e.g. 'articles').</p>
+                </div>
+                <div class="w50 widget">
+                    <h3>
+                        <label>Model name</label>
+                    </h3>
+                    <input type="text" name="modelName" class="tl_text" placeholder="modelname" />
+                    <p class="tl_help tl_tip">Here you can specify the modelname (e.g. ArticleModel).</p>
+                </div>
+                <div class="w50 widget">
+                    <h3>
+                        <label>Author</label>
+                    </h3>
+                    <input type="text" name="author" class="tl_text" placeholder="author" />
+                    <p class="tl_help tl_tip">Here you can enter the author name.</p>
+                </div>
+                <div class="w50 widget">
+                    <h3>
+                        <label>Author URL</label>
+                    </h3>
+                    <input type="text" name="authorUrl" class="tl_text" placeholder="author url" />
+                    <p class="tl_help tl_tip">Here you can enter the author url.</p>
+                </div>
+                <div class="w50 widget">
+                    <input type="submit" class="tl_submit" value="Create" />
+                </div>
+            </div>
+
+        </form>
+    </div>
+</fieldset>
+<?php if (!$this->output == null):?>
+<div class="tl_tbox">
+    <div class="widget">
+        <div class="tl_texarea output">
+            <textarea name="source" class="tl_textarea monospace" rows="12" cols="80"><?= $this->output ?></textarea>
+        </div>
+    </div>
+</div>
+<?php endif; ?>

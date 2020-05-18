@@ -1,0 +1,39 @@
+/**
+ * Reads and writes <?= $this->pluralName ?>&nbsp;
+ *
+<?php foreach ($this->fields as $field): ?>
+    <?php if (!$field['skipField']): ?>
+        * @property <?= $field['type'] ?> $<?= $field['name'] ?>&nbsp;
+    <?php endif; ?>
+<?php endforeach; ?>
+ *
+ * @method static <?= $this->modelName ?>|null findById($id, array $opt=array())
+ * @method static <?= $this->modelName ?>|null findByPk($id, array $opt=array())
+    <?php if ($this->aliasExists): ?>
+        * @method static <?= $this->modelName ?>|null findByIdOrAlias($val, array $opt=array())
+    <?php endif; ?>
+ * @method static <?= $this->modelName ?>|null findOneBy($col, $val, array $opt=array())
+<?php foreach ($this->fields as $field): ?>
+    <?php if (!$field['skipMethod']): ?>
+        * @method static <?= $this->modelName ?>|null findOneBy<?= ucfirst($field['name']) ?>($val, array $opt=array())
+    <?php endif; ?>
+<?php endforeach; ?>
+ *
+<?php foreach ($this->fields as $field): ?>
+    <?php if (!$field['skipMethod']): ?>
+        * @method static Collection|<?= $this->modelName ?>[]|<?= $this->modelName ?>|null findBy<?= ucfirst($field['name']) ?>($val, array $opt=array())
+    <?php endif; ?>
+<?php endforeach; ?>
+ *
+ * @method static integer countById($id, array $opt=array())
+<?php foreach ($this->fields as $field): ?>
+    <?php if (!$field['skipMethod']): ?>
+        * @method static integer countBy<?= ucfirst($field['name']) ?>($val, array $opt=array())
+    <?php endif; ?>
+<?php endforeach; ?>
+<?php if (!$this->author == null): ?>
+ *
+ * @author <?= $this->author ?> <<?= $this->authorUrl ?>>
+
+<?php endif; ?>
+ */

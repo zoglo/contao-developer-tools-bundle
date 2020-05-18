@@ -1,0 +1,22 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" original="src/Resources/contao/languages/en/modules.php" source-language="en" target-language="de">
+    <body>
+      <trans-unit id="MOD.developer_tools.0">
+        <source>Deveoper Tools</source>
+        <target>Deveoper Tools</target>
+      </trans-unit>
+      <trans-unit id="MOD.developer_tools.1">
+        <source>Deveoper Tools</source>
+        <target>Deveoper Tools</target>
+      </trans-unit>
+      <trans-unit id="MOD.dcaToModel.0">
+        <source>DCA to Model</source>
+        <target>DCA to Model</target>
+      </trans-unit>
+      <trans-unit id="MOD.dcaToModel.1">
+        <source>DCA to Model</source>
+        <target>DCA to Model</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

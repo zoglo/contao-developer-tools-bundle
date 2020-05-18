@@ -1,0 +1,43 @@
+{
+  "name":"zoglo/contao-developer-tools-bundle",
+  "type":"contao-bundle",
+  "description":"Contao developer tools",
+  "keywords":["contao","developer","dca","model"],
+  "license":"MIT",
+  "authors":[
+    {
+      "name":"Sebastian Zoglowek",
+      "homepage":"https://oveleon.de/",
+      "role":"Developer"
+    }
+  ],
+  "require":{
+    "php":"^7.0",
+    "contao/core-bundle":"^4.4"
+  },
+  "require-dev": {
+    "contao/manager-plugin": "^2.0"
+  },
+  "conflict": {
+    "contao/core": "*",
+    "contao/core-bundle": "4.4.1",
+    "contao/manager-plugin": "<2.0 || >=3.0"
+  },
+  "autoload":{
+    "psr-4": {
+      "Zoglo\\ContaoDeveloperToolsBundle\\": "src/"
+    },
+    "classmap": [
+      "src/Resources/contao/"
+    ],
+    "exclude-from-classmap": [
+      "src/Resources/contao/config/",
+      "src/Resources/contao/dca/",
+      "src/Resources/contao/languages/",
+      "src/Resources/contao/templates/"
+    ]
+  },
+  "extra":{
+    "contao-manager-plugin": "Zoglo\\ContaoDeveloperToolsBundle\\ContaoManager\\Plugin"
+  }
+}
