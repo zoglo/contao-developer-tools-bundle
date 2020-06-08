@@ -13,7 +13,7 @@
                     <h3>
                         <label>DCA</label>
                     </h3>
-                    <select name="dca" class="tl_select">
+                    <select name="dca" class="tl_select tl_chosen">
                         <?php foreach($this->dcalist as $name): ?>
                             <option value="<?= $name ?>"<?= $this->selectedOption === $name ? ' selected' : '' ?>><?= $name ?></option>
                         <?php endforeach; ?>

@@ -38,6 +38,7 @@ class ModuleDcaToModel extends BackendModule
             }
         }
 
+        sort($arrDCA);
         $this->Template->dcalist = $arrDCA;
 
         $output = '';
