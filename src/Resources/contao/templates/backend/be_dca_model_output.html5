@@ -24,6 +24,9 @@
         * @method static Collection|<?= $this->modelName ?>[]|<?= $this->modelName ?>|null findBy<?= ucfirst($field['name']) ?>($val, array $opt=array())
     <?php endif; ?>
 <?php endforeach; ?>
+ * @method static Collection|<?= $this->modelName ?>[]|<?= $this->modelName ?>|null findMultipleByIds($var, array $opt=array())
+ * @method static Collection|<?= $this->modelName ?>[]|<?= $this->modelName ?>|null findBy($col, $val, array $opt=array())
+ * @method static Collection|<?= $this->modelName ?>[]|<?= $this->modelName ?>|null findAll(array $opt=array())
  *
  * @method static integer countById($id, array $opt=array())
 <?php foreach ($this->fields as $field): ?>
