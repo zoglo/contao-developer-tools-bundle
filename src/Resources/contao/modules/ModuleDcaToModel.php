@@ -32,7 +32,10 @@ class ModuleDcaToModel extends BackendModule
                 {
                     foreach ($module['tables'] as $tableName)
                     {
-                        $arrDCA[] = $tableName;
+                        if(!in_array($tableName, $arrDCA))
+                        {
+                            $arrDCA[] = $tableName;
+                        }
                     }
                 }
             }
