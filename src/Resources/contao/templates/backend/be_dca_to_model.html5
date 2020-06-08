@@ -38,14 +38,14 @@
                     <h3>
                         <label>Author</label>
                     </h3>
-                    <input type="text" name="author" class="tl_text" placeholder="author" />
+                    <input type="text" name="author" class="tl_text" placeholder="author" value="<?= Input::post('author') ?>"/>
                     <p class="tl_help tl_tip">Here you can enter the author name.</p>
                 </div>
                 <div class="w50 widget">
                     <h3>
                         <label>Author URL</label>
                     </h3>
-                    <input type="text" name="authorUrl" class="tl_text" placeholder="author url" />
+                    <input type="text" name="authorUrl" class="tl_text" placeholder="author url" value="<?= Input::post('authorUrl') ?>"/>
                     <p class="tl_help tl_tip">Here you can enter the author url.</p>
                 </div>
                 <div class="w50 widget">

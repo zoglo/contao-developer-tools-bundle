@@ -2,11 +2,13 @@ use Contao\Model;
 use Contao\Model\Collection;
 
 /**
- * Reads and writes <?= $this->pluralName ?>&nbsp;
+ * Reads and writes <?= $this->pluralName ?>
+
  *
 <?php foreach ($this->fields as $field): ?>
     <?php if (!$field['skipField']): ?>
         * @property <?= $field['type'] ?> $<?= $field['name'] ?>
+
     <?php endif; ?>
 <?php endforeach; ?>
  *
